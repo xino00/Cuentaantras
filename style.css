@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: #4a3b42; /* Darker text for light theme */
+    background: url('bg-light.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: #fcf4f8; /* Fallback light pastel background */
+}
+
+/* Light overlay to ensure text is readable */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 0;
+}
+
+/* Overlay para empezar (por el autoplay de musica) */
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 1s ease;
+}
+
+.overlay h2 {
+    font-size: 2rem;
+    color: #d81b60;
+    animation: pulse 2s infinite;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Glassmorphism panel - Light Theme */
+.glass-panel {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 3rem 4rem;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(230, 150, 180, 0.3);
+    z-index: 10;
+    animation: fadeIn 2s ease-in-out;
+    max-width: 90%;
+}
+
+.title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #d81b60;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    font-weight: normal;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1.5rem;
+    border-radius: 16px;
+    min-width: 110px;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5), 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.time-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 25px rgba(216, 27, 96, 0.2), inset 0 0 20px rgba(255, 255, 255, 1);
+}
+
+.time-box span:first-child {
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, #d81b60, #ff8a80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.05);
+}
+
+.label {
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #885566;
+    font-weight: 600;
+}
+
+.subtitle {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #d81b60;
+    letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.05); opacity: 1; text-shadow: 0 0 10px #ff8a80; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Particles / Sparkles styling */
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.sparkle {
+    position: absolute;
+    background: radial-gradient(circle, #fff 20%, #ffe0b2 50%, transparent 80%);
+    border-radius: 50%;
+    animation: twinkle infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1) rotate(180deg);
+        opacity: 1;
+        box-shadow: 0 0 10px #fff;
+    }
+    100% {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 3rem;
+    }
+    .countdown {
+        gap: 1rem;
+    }
+    .time-box {
+        min-width: 80px;
+        padding: 1rem;
+    }
+    .time-box span:first-child {
+        font-size: 2.5rem;
+    }
+    .glass-panel {
+        padding: 2rem 1.5rem;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiempo para vernos!!!!</title>
+    <!-- Google Fonts for premium typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Audio para música sorpresa (asegúrate de poner un archivo musica.mp3 en la carpeta) -->
+    <audio id="bg-music" src="musica.mp3" loop></audio>
+
+    <div id="start-overlay" class="overlay">
+        <h2>Toca la pantalla para una sorpresa mágica ✨</h2>
+    </div>
+
+    <div id="particles-container"></div>
+    
+    <div class="container glass-panel">
+        <h1 class="title">Tiempo para vernos!!!!</h1>
+        <div class="countdown" id="countdown">
+            <div class="time-box">
+                <span id="days">00</span>
+                <span class="label">Días</span>
+            </div>
+            <div class="time-box">
+                <span id="hours">00</span>
+                <span class="label">Horas</span>
+            </div>
+            <div class="time-box">
+                <span id="minutes">00</span>
+                <span class="label">Minutos</span>
+            </div>
+            <div class="time-box">
+                <span id="seconds">00</span>
+                <span class="label">Segundos</span>
+            </div>
+        </div>
+        <p class="subtitle" id="message">La espera valdrá la pena...</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
