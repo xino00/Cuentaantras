@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tiempo para vernos!!!!</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💖</text></svg>">
     <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,15 +12,15 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Audio para música sorpresa (asegúrate de poner un archivo musica.mp3 en la carpeta) -->
-    <audio id="bg-music" src="musica.mp3" loop></audio>
+    <!-- Audio para música sorpresa -->
+    <audio id="bg-music" src="The Vaccines - I Always Knew [1yJVj-mJROA].mp3" loop></audio>
 
-    <div id="start-overlay" class="overlay">
+    <div id="start-overlay" class="overlay" tabindex="0" role="button" aria-label="Iniciar">
         <h2>Toca la pantalla para una sorpresa mágica ✨</h2>
     </div>
 
     <div id="particles-container"></div>
-    
+
     <div class="container glass-panel">
         <h1 class="title">Tiempo para vernos!!!!</h1>
         <div class="countdown" id="countdown">
@@ -40,8 +41,13 @@
                 <span class="label">Segundos</span>
             </div>
         </div>
+        <div class="progress-wrapper">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p class="progress-text" id="progress-text"></p>
         <p class="subtitle" id="message">La espera valdrá la pena...</p>
     </div>
+    <div id="hearts-container"></div>
     <script src="script.js"></script>
 </body>
 </html>
