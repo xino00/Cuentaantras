@@ -7,8 +7,9 @@
 body {
     font-family: 'Outfit', sans-serif;
     color: #4a3b42;
-    background: url('bg-light.png') no-repeat center center fixed;
+    background: url('bg-light.png') no-repeat center center;
     background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -293,21 +294,115 @@ body::before {
     }
 }
 
+/* Tablets */
 @media (max-width: 768px) {
     .title-btn {
-        font-size: 3rem;
+        font-size: 2.8rem;
+        padding: 0.2rem 1rem;
     }
     .countdown {
         gap: 1rem;
     }
     .time-box {
-        min-width: 80px;
-        padding: 1rem;
+        min-width: 90px;
+        padding: 1.2rem;
     }
     .time-box span:first-child {
         font-size: 2.5rem;
     }
     .glass-panel {
         padding: 2rem 1.5rem;
+        max-width: 95%;
+    }
+    .overlay h2 {
+        font-size: 1.6rem;
+        padding: 15px;
+    }
+    .subtitle {
+        font-size: 1.1rem;
+    }
+    .secret-message {
+        max-width: 85vw;
+        padding: 2rem;
+    }
+}
+
+/* Fix iOS background-attachment: fixed */
+@supports (-webkit-touch-callout: none) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* Mobile small */
+@media (max-width: 480px) {
+    .title-btn {
+        font-size: 2.2rem;
+        margin-bottom: 1.2rem;
+        padding: 0.2rem 0.8rem;
+    }
+    .countdown {
+        gap: 0.6rem;
+    }
+    .time-box {
+        min-width: 70px;
+        padding: 0.8rem 0.6rem;
+        border-radius: 12px;
+    }
+    .time-box span:first-child {
+        font-size: 2rem;
+        margin-bottom: 0.3rem;
+    }
+    .label {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+    .glass-panel {
+        padding: 1.5rem 1rem;
+        border-radius: 18px;
+        max-width: 95%;
+    }
+    .progress-wrapper {
+        margin-top: 1.2rem;
+    }
+    .progress-text {
+        font-size: 0.78rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        margin-top: 0.8rem;
+    }
+    .fun-counter {
+        font-size: 0.75rem;
+    }
+    .overlay h2 {
+        font-size: 1.3rem;
+        padding: 10px;
+    }
+    .secret-message {
+        max-width: 90vw;
+        padding: 1.5rem 1.2rem;
+        border-radius: 16px;
+    }
+    .secret-message p {
+        font-size: 1rem;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .glass-panel {
+        max-width: 700px;
+        padding: 3.5rem 5rem;
+    }
+    .title-btn {
+        font-size: 4.5rem;
+    }
+    .time-box {
+        min-width: 130px;
+        padding: 1.8rem;
+    }
+    .time-box span:first-child {
+        font-size: 4rem;
     }
 }
