@@ -68,13 +68,28 @@ body::before {
     max-width: 90%;
 }
 
-.title {
+.title-btn {
     font-family: 'Great Vibes', cursive;
     font-size: 4rem;
     margin-bottom: 2rem;
     color: #d81b60;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     font-weight: normal;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.3rem 1.5rem;
+    border-radius: 16px;
+    transition: background 0.3s ease, transform 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.title-btn:hover {
+    background: rgba(216, 27, 96, 0.08);
+}
+
+.title-btn:active {
+    transform: scale(0.97);
 }
 
 .countdown {
@@ -174,9 +189,7 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: #fff;
     border: 2px solid #d81b60;
     border-radius: 20px;
     padding: 2.5rem 3rem;
@@ -279,7 +292,7 @@ body::before {
 }
 
 @media (max-width: 768px) {
-    .title {
+    .title-btn {
         font-size: 3rem;
     }
     .countdown {

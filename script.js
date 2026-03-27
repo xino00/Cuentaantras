@@ -136,10 +136,9 @@ updateCountdown();
 // === 4. Easter egg — toca el titulo 5 veces ===
 let titleTaps = 0;
 let tapTimer = null;
-const titleEl = document.querySelector('.title');
+const titleEl = document.getElementById('title-btn');
 const secretEl = document.getElementById('secret-message');
 
-titleEl.style.cursor = 'pointer';
 titleEl.addEventListener('click', () => {
     titleTaps++;
     clearTimeout(tapTimer);
