@@ -1,57 +1,34 @@
-# ⏰ Cuentaantras - Contador de Días
+# ⏰ Cuenta Atrás
 
-Un hermoso contador interactivo hacia una fecha especial, construido con HTML, CSS y JavaScript.
+Contador interactivo hacia una fecha especial, con glassmorphism, música y efectos visuales.
 
-## 🌟 Características
+## [Ver en vivo](https://xino00.github.io/Cuentaantras/)
 
-- **Diseño moderno**: Glassmorphism con fondos animados
-- **Contador en tiempo real**: Muestra días, horas, minutos y segundos
-- **Partículas animadas**: Destellos mágicos que aparecen aleatoriamente
-- **Música de fondo**: Soporte para audio (opcional)
-- **Responsive**: Se adapta perfectamente a dispositivos móviles
-- **Mensaje personalizado**: Cambia cuando llega la fecha especial
+## Características
 
-## 🚀 Uso
+- Contador en tiempo real (días, horas, minutos, segundos)
+- Barra de progreso con porcentaje de espera completada
+- Música de fondo (The Vaccines - I Always Knew)
+- Destellos animados con pool limitado para buen rendimiento
+- Lluvia de corazones al llegar a la fecha
+- Diseño glassmorphism responsive
+- Accesible por teclado
 
-1. Descarga o clona el repositorio
-2. Abre `index.html` en tu navegador
-3. (Opcional) Coloca un archivo `musica.mp3` en la carpeta para agregar música
+## Configuración
 
-## ⚙️ Configuración
-
-Para cambiar la fecha destino, edita el archivo `script.js`:
+Edita `script.js` para cambiar las fechas:
 
 ```javascript
-const targetDate = new Date(2026, 3, 1, 0, 0, 0).getTime(); // Cambia aquí
+const targetDate = new Date(2026, 3, 1, 22, 0, 0).getTime(); // Fecha objetivo
+const startDate = new Date(2026, 2, 27, 0, 0, 0).getTime();  // Inicio de la espera (para la barra de progreso)
 ```
 
-Los meses comienzan en 0, así que:
-- `0` = Enero
-- `3` = Abril
-- `11` = Diciembre
+Los meses empiezan en 0 (`0` = Enero, `3` = Abril, `11` = Diciembre).
 
-## 🎨 Personalización
+## Tecnologías
 
-- **Colores**: Edita `style.css` para cambiar los gradientes y colores
-- **Mensaje**: Modifica el texto en `index.html` (línea 24) y `script.js` (línea 26)
-- **Fondo**: Reemplaza `bg-light.png` y `bg.png` por tus propias imágenes
-
-## 📦 Tecnologías
-
-- HTML5
-- CSS3 (Glassmorphism, Animaciones, Media Queries)
-- Vanilla JavaScript
+- HTML5 / CSS3 / JavaScript vanilla
 - Google Fonts (Great Vibes, Outfit)
-
-## 📄 Licencia
-
-MIT - Siéntete libre de usar y modificar este proyecto
-
-## 💡 Consejos
-
-- Para mejor rendimiento, optimiza las imágenes de fondo
-- La música se reproduce cuando el usuario toca la pantalla (respeta el autoplay policy de navegadores modernos)
-- Funciona sin conexión a internet
 
 ---
 
