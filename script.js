@@ -49,7 +49,7 @@ function rotateMessage(days, hours) {
     }, 300);
 }
 
-// Rotar cada 10 segundos
+// Rotar cada 5 segundos
 setInterval(() => {
     const now = new Date().getTime();
     const distance = targetDate - now;
@@ -57,7 +57,7 @@ setInterval(() => {
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     rotateMessage(days, hours);
-}, 10000);
+}, 5000);
 
 // === Overlay y musica ===
 const overlay = document.getElementById('start-overlay');
