@@ -1,35 +1,36 @@
-# ⏰ Cuenta Atrás
+# Cuenta Atras
 
-Contador interactivo hacia una fecha especial, con glassmorphism, música y efectos visuales.
+Countdown to a special date. Glassmorphism UI with music, sparkles, and heart rain.
 
-## [Ver en vivo](https://xino00.github.io/Cuentaantras/)
+## [See it live](https://xino00.github.io/Cuentaantras/)
 
-## Características
+## Features
 
-- Contador en tiempo real (días, horas, minutos, segundos)
-- Barra de progreso con porcentaje de espera completada
-- Música de fondo (The Vaccines - I Always Knew)
-- Destellos animados con pool limitado para buen rendimiento
-- Lluvia de corazones al llegar a la fecha
-- Diseño glassmorphism responsive
-- Accesible por teclado
+- Real-time countdown (days, hours, minutes, seconds)
+- Progress bar showing how much of the wait is done
+- Rotating love messages that change dynamically as the date approaches
+- Background music (The Vaccines - I Always Knew)
+- Animated sparkle particles with a capped pool for performance
+- Heart rain celebration when the countdown hits zero
+- Easter egg hidden in the title
+- Glassmorphism design, fully responsive (mobile, tablet, desktop)
+- Keyboard accessible
 
-## Configuración
+## Setup
 
-Edita `script.js` para cambiar las fechas:
+Edit `script.js` to set your dates:
 
 ```javascript
-const targetDate = new Date(2026, 3, 1, 22, 0, 0).getTime(); // Fecha objetivo
-const startDate = new Date(2026, 2, 27, 0, 0, 0).getTime();  // Inicio de la espera (para la barra de progreso)
+const targetDate = new Date(2026, 3, 1, 22, 0, 0).getTime(); // Target date
+const startDate = new Date(2026, 2, 27, 0, 0, 0).getTime();  // Start date (for progress bar)
 ```
 
-Los meses empiezan en 0 (`0` = Enero, `3` = Abril, `11` = Diciembre).
+Months are zero-indexed (`0` = January, `3` = April, `11` = December).
 
-## Tecnologías
+## Stack
 
-- HTML5 / CSS3 / JavaScript vanilla
-- Google Fonts (Great Vibes, Outfit)
+HTML / CSS / vanilla JS. No build tools, no dependencies. Google Fonts (Great Vibes, Outfit).
 
 ---
 
-Hecho con ❤️
+Made with love.
